@@ -1,0 +1,40 @@
+🏦 문제: 가계부 정산
+
+사용자는 여러 건의 금융 거래를 기록합니다. 각 거래는 다음 정보를 가집니다:
+
+id: 거래 고유 ID (문자열)
+type: "income" 또는 "expense"
+category: 카테고리 이름 (문자열)
+amount: 금액 (양의 정수)
+
+다음 쿼리들을 순서대로 처리하는 시스템을 구현하세요:
+
+ADD id type category amount — 거래 추가
+DELETE id — 해당 ID의 거래 삭제 (없으면 무시)
+QUERY category — 해당 카테고리의 순수 잔액 반환
+(income 합계 - expense 합계, 거래가 없으면 0)
+TOP_CATEGORY k — 전체 지출(expense) 기준 상위 k개 카테고리와 각 지출 합계 반환
+(지출 금액 내림차순, 동점이면 카테고리명 사전순)
+
+입력 예시:
+
+ADD t1 income 식비 50000
+ADD t2 expense 식비 30000
+ADD t3 expense 교통 15000
+ADD t4 expense 식비 20000
+QUERY 식비
+DELETE t4
+QUERY 식비
+TOP_CATEGORY 2
+
+출력 예시:
+
+QUERY 식비: 0
+QUERY 식비: 20000
+TOP_CATEGORY: [식비=30000, 교통=15000]
+
+제약:
+
+쿼리 수: 최대 100,000개
+k ≤ 전체 카테고리 수
+금액은 1 이상 10,000,000 이하
