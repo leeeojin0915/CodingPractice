@@ -1,4 +1,5 @@
-import java.util.Arrays;
+package practice;
+
 import java.util.Scanner;
 
 public class FindOfNum2 {

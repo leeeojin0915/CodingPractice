@@ -1,4 +1,5 @@
-import javax.swing.*;
+package practice;
+
 import java.util.HashMap;
 import java.util.Scanner;
 

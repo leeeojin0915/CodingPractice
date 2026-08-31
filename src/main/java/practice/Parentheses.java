@@ -1,5 +1,6 @@
+package practice;
+
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Parentheses {
     public static void main(String[] args) {
